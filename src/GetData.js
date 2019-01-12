@@ -13,6 +13,7 @@ const GetData = () => {
     );
     return (
         <>
+            <h1>Holy shit, an abritary list of data from a placeholder api!</h1>
             {data.length !== 0 && (
                 <div>
                     {data.data.map(data => (
