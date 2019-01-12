@@ -10,7 +10,7 @@ export const StateHookTest = props => {
         display: flex;
         flex-direction: column;
         background-color: ${state.color};
-        height: 100vh;
+        height: 150vh;
         font-size: 2rem;
         padding: 2rem;
         color: ${state.textColor};

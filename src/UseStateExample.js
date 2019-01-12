@@ -4,8 +4,9 @@ import styled from "styled-components";
 export const UseStateExample = () => {
     let Card = styled.div`
         background-color: white;
-        padding: 10rem 0;
-        margin: 0rem 50rem;
+        margin: auto 25rem;
+        padding: 5rem 0;
+
         color: #000080;
     `;
 
