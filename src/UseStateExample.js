@@ -1,31 +1,55 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import CaptainHook from "./Captain_Hook_pose.jpg";
 
 export const UseStateExample = () => {
-    let Card = styled.div`
-        background-color: white;
-        margin: auto 25rem;
-        padding: 5rem 0;
+  const [count, setCount] = useState(0);
+  const incrementNumber = () => setCount(count + 1);
+  const decrementNumber = () => {
+    if (count !== 0) {
+      setCount(count - 1);
+    }
+  };
 
-        color: #000080;
-    `;
+  return (
+    <Styling>
+      {count >= 10 && (
+        <div>
+          {" "}
+          <Img src={CaptainHook} alt="hook" height={400} />
+          <p>Hooked!</p>{" "}
+        </div>
+      )}
 
-    const [count, setCount] = useState(0);
-    const incrementNumber = () => setCount(count + 1);
-    const decrementNumber = () => {
-        if (count !== 0) {
-            setCount(count - 1);
-        }
-    };
-
-    return (
-        <>
-            {count === 0 && <Card>Ain't got no count</Card>}
-            {count > 0 && <Card>{count}</Card>}
-            <div>
-                <div onClick={incrementNumber}>Click here to increment</div>
-                <div onClick={decrementNumber}>Click here to decrement</div>
-            </div>
-        </>
-    );
+      <p>Abritrary Counter: {count}</p>
+      <span onClick={incrementNumber}> {` \u{261D}`} </span>
+      <span onClick={decrementNumber}> {`\u{1F447}`}</span>
+    </Styling>
+  );
 };
+
+const Styling = styled.div`
+  font-size: 28px;
+  letter-spacing: 0.2rem;
+
+  span:hover {
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 60px;
+  }
+`;
+
+const AnimateHook = keyframes`
+from {
+    margin-left: 2000px
+}
+to {
+    margin-left: 0px;
+}
+`;
+
+const Img = styled.img`
+  animation: ${AnimateHook} 0.2s linear;
+`;

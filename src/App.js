@@ -1,17 +1,35 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import AppState from "./AppState";
-import { StateHookTest } from "./StateHookTest";
+import ReducerDemo from "./ReducerDemo";
+import { UseStateExample } from "./UseStateExample";
+
+const UseEffectDemo = React.lazy(() => import("./useEffectExample"));
 
 class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <AppState />
-            </div>
-        );
-    }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      selected: null
+    };
+  }
+
+  Selector = e => {
+    this.setState({ selected: e.target.value });
+  };
+  render() {
+    return (
+      <div className="App">
+        <ReducerDemo />
+        <UseStateExample />
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <UseEffectDemo />
+        </Suspense>
+      </div>
+    );
+  }
 }
 
 export default App;
