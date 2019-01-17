@@ -34,8 +34,8 @@ const ReducerDemo = () => {
   return (
     <>
       <Styling>
-        <h1>React hooks demo...</h1>
-        <p>Beware of Captain Hook</p>
+        <h1>React hooks demo</h1>
+        <p>...Beware of Captain Hook</p>
       </Styling>
 
       <Implementation onClick={() => dispatch({ type: "test1" })}>
