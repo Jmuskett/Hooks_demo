@@ -48,7 +48,7 @@ export default useEffectExample;
 const Styling = styled.div`
   font-size: 28px;
   letter-spacing: 0.2rem;
-  margin: 200px;
+  margin: 50px;
 
   span:hover {
     cursor: pointer;

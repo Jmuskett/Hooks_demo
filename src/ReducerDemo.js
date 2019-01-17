@@ -54,7 +54,7 @@ export default ReducerDemo;
 const Implementation = styled.div`
   display: inline-flex;
   justify-content: center;
-  margin: 100px;
+  margin: 50px;
   font-size: 60px;
 
   p:hover {

@@ -31,8 +31,7 @@ export const UseStateExample = () => {
 const Styling = styled.div`
   font-size: 28px;
   letter-spacing: 0.2rem;
-  margin: 200px;
-
+  margin: 50px;
   span:hover {
     cursor: pointer;
   }
@@ -44,13 +43,18 @@ const Styling = styled.div`
 
 const AnimateHook = keyframes`
 from {
+    opacity: 0;
     margin-left: 2000px
 }
+50% {
+    opacity: 0.5;
+}
 to {
+    opacity: 1;
     margin-left: 0px;
 }
 `;
 
 const Img = styled.img`
-  animation: ${AnimateHook} 0.2s linear;
+  animation: ${AnimateHook} 1s linear;
 `;
