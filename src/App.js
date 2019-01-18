@@ -23,7 +23,7 @@ class App extends Component {
       <div className="App">
         <ReducerDemo />
         <UseStateExample />
-
+      
         <Suspense fallback={<div>Loading...</div>}>
           <UseEffectDemo />
         </Suspense>

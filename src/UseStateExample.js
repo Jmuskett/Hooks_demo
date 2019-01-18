@@ -15,9 +15,7 @@ export const UseStateExample = () => {
     <Styling>
       {count >= 10 && (
         <div>
-          {" "}
           <Img src={CaptainHook} alt="hook" height={400} />
-          <p>Hooked!</p>{" "}
         </div>
       )}
 

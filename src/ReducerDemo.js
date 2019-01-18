@@ -24,7 +24,7 @@ const ReducerDemo = () => {
     display: flex;
     flex-direction: column;
     background-color: ${state.color};
-    height: 70vh;
+    height: 50vh;
     font-size: 2rem;
     padding: 2rem;
     color: ${state.textColor};
@@ -35,7 +35,6 @@ const ReducerDemo = () => {
     <>
       <Styling>
         <h1>React hooks demo</h1>
-        <p>...Beware of Captain Hook</p>
       </Styling>
 
       <Implementation onClick={() => dispatch({ type: "test1" })}>

@@ -11,7 +11,7 @@ const useEffectExample = () => {
       axios
         .get("https://jsonplaceholder.typicode.com/users")
         .then(data => setData(data)),
-    {}
+    []
   );
   return (
     <Styling>
